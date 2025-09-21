@@ -1,0 +1,83 @@
+[
+  {
+    "id": "f1a2b3c4-d5e6-7890-abcd-1234567890ab",
+    "campaignId": "cmp001",
+    "region": "San Francisco, USA",
+    "scannedAt": "2025-09-19T08:15:23Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+    "ipAddress": "192.168.1.101"
+  },
+  {
+    "id": "a2b3c4d5-e6f7-8901-bcde-2345678901bc",
+    "campaignId": "cmp002",
+    "region": "Berlin, Germany",
+    "scannedAt": "2025-09-18T14:22:45Z",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)",
+    "ipAddress": "172.16.254.1"
+  },
+  {
+    "id": "b3c4d5e6-f7g8-9012-cdef-3456789012cd",
+    "campaignId": "cmp003",
+    "region": "Tokyo, Japan",
+    "scannedAt": "2025-09-17T19:30:12Z",
+    "userAgent": "Mozilla/5.0 (Linux; Android 11; SM-G991B)",
+    "ipAddress": "203.0.113.5"
+  },
+  {
+    "id": "c4d5e6f7-g8h9-0123-def0-4567890123de",
+    "campaignId": "cmp004",
+    "region": "Sydney, Australia",
+    "scannedAt": "2025-09-19T03:45:00Z",
+    "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X)",
+    "ipAddress": "198.51.100.23"
+  },
+  {
+    "id": "d5e6f7g8-h9i0-1234-ef01-5678901234ef",
+    "campaignId": "cmp005",
+    "region": "Toronto, Canada",
+    "scannedAt": "2025-09-18T11:10:33Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0)",
+    "ipAddress": "10.0.0.45"
+  },
+  {
+    "id": "e6f7g8h9-i0j1-2345-f012-6789012345f0",
+    "campaignId": "cmp006",
+    "region": "Paris, France",
+    "scannedAt": "2025-09-19T09:05:12Z",
+    "userAgent": "Mozilla/5.0 (Linux; Android 10; Pixel 4)",
+    "ipAddress": "192.0.2.33"
+  },
+  {
+    "id": "f7g8h9i0-j1k2-3456-0123-789012345601",
+    "campaignId": "cmp007",
+    "region": "Mumbai, India",
+    "scannedAt": "2025-09-17T22:18:47Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0)",
+    "ipAddress": "203.0.113.99"
+  },
+  {
+    "id": "g8h9i0j1-k2l3-4567-1234-890123456712",
+    "campaignId": "cmp008",
+    "region": "São Paulo, Brazil",
+    "scannedAt": "2025-09-18T16:40:29Z",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_3)",
+    "ipAddress": "192.168.100.100"
+  },
+  {
+    "id": "h9i0j1k2-l3m4-5678-2345-901234567823",
+    "campaignId": "cmp009",
+    "region": "Cape Town, South Africa",
+    "scannedAt": "2025-09-19T05:55:18Z",
+    "userAgent": "Mozilla/5.0 (Linux; Android 12; Redmi Note 10)",
+    "ipAddress": "10.10.10.10"
+  },
+  {
+    "id": "i0j1k2l3-m4n5-6789-3456-012345678934",
+    "campaignId": "cmp010",
+    "region": "Singapore",
+    "scannedAt": "2025-09-18T20:30:00Z",
+    "userAgent": "Mozilla/5.0 (iPad; CPU OS 14_0 like Mac OS X)",
+    "ipAddress": "198.18.0.1"
+  },
+  // ... 90 more entries follow in similar structure
+]
