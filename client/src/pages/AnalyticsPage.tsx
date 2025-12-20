@@ -188,7 +188,7 @@ export function AnalyticsPage() {
                           <span className="text-sm text-green-600">{month.campaignCount} campaigns</span>
                         </div>
                       </div>
-                      <div className="flex space-x-2">
+                      <div className="hidden sm:flex space-x-2">
                         <div className="w-16 h-2 bg-blue-200 rounded">
                           <div 
                             className="h-2 bg-blue-600 rounded" 
@@ -234,7 +234,7 @@ export function AnalyticsPage() {
                       </div>
                       <div className="flex items-center space-x-3">
                         <span className="text-sm text-gray-600">{region.scanCount} scans</span>
-                        <div className="w-20 h-2 bg-gray-200 rounded">
+                        <div className="hidden sm:inline w-20 h-2 bg-gray-200 rounded">
                           <div 
                             className="h-2 bg-indigo-600 rounded" 
                             style={{ width: `${region.percentage}%` }}
