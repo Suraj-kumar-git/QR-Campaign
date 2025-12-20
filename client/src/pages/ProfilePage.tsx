@@ -95,6 +95,48 @@ export default function ProfilePage() {
     },
   });
 
+  const validatePassword = (
+    password: string,
+  ): { isValid: boolean; message?: string } => {
+    if (!password) {
+      return { isValid: false, message: "Password is required." };
+    }
+
+    if (password.length < 9) {
+      return {
+        isValid: false,
+        message: "Password must be at least 9 characters long.",
+      };
+    }
+
+    const digitMatches = password.match(/[0-9]/g);
+    const letterMatches = password.match(/[a-zA-Z]/g);
+    const specialMatches = password.match(/[!@#$%^&*(),.?":{}|<>]/g);
+
+    if (!digitMatches || digitMatches.length < 2) {
+      return {
+        isValid: false,
+        message: "Password must contain at least 2 digits.",
+      };
+    }
+
+    if (!letterMatches || letterMatches.length < 2) {
+      return {
+        isValid: false,
+        message: "Password must contain at least 2 letters.",
+      };
+    }
+
+    if (!specialMatches || specialMatches.length < 2) {
+      return {
+        isValid: false,
+        message: "Password must contain at least 2 special characters.",
+      };
+    }
+
+    return { isValid: true };
+  };
+
   const handlePasswordChange =
     (field: keyof PasswordChangeData) =>
     (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -106,6 +148,26 @@ export default function ProfilePage() {
 
   const handlePasswordSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Validate password
+    const passwordValidation = validatePassword(passwordData.newPassword);
+    if (!passwordValidation.isValid) {
+      toast({
+        title: "Password Validation Error",
+        description: passwordValidation.message,
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Check password confirmation
+    if (passwordData.newPassword !== passwordData.confirmPassword) {
+      toast({
+        title: "Password Mismatch",
+        description: "Passwords do not match. Please try again.",
+        variant: "destructive",
+      });
+      return;
+    }
     passwordChangeMutation.mutate(passwordData);
   };
 
@@ -226,7 +288,7 @@ export default function ProfilePage() {
                     type={showPasswords.new ? "text" : "password"}
                     value={passwordData.newPassword}
                     onChange={handlePasswordChange("newPassword")}
-                    placeholder="New password"
+                    placeholder="Min 9 chars: 2+ letters, 2+ digits, 2+ special"
                     minLength={6}
                     required
                     data-testid="input-new-password"
@@ -256,7 +318,7 @@ export default function ProfilePage() {
                     type={showPasswords.confirm ? "text" : "password"}
                     value={passwordData.confirmPassword}
                     onChange={handlePasswordChange("confirmPassword")}
-                    placeholder="Retype new password"
+                    placeholder="Min 9 chars: 2+ letters, 2+ digits, 2+ special"
                     minLength={6}
                     required
                     data-testid="input-confirm-password"
