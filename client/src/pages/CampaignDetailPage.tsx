@@ -544,7 +544,7 @@ export function CampaignDetailPage() {
       <Card>
         <CardContent className="p-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-2 relative z-10 bg-white dark:bg-gray-900 p-1 rounded">
+            <div className="lg:col-span-2 relative z-10 bg-white dark:bg-gray-900 p-4 rounded">
               <h1
                 className="text-3xl font-bold text-black dark:text-white mb-4"
                 data-testid="campaign-name"
@@ -601,7 +601,7 @@ export function CampaignDetailPage() {
                   className="flex items-center gap-2"
                 >
                   <QrCode className="w-4 h-4 mr-2" />
-                  Download
+                  <span className="hidden sm:inline">Download</span>
                 </Button>
 
                 <Dialog
@@ -616,7 +616,7 @@ export function CampaignDetailPage() {
                       className="flex items-center gap-2"
                     >
                       <Share2 className="w-4 h-4 mr-2" />
-                      Share
+                      <span className="hidden sm:inline">Share</span>
                     </Button>
                   </DialogTrigger>
                   <DialogContent className="sm:max-w-md">
@@ -702,7 +702,7 @@ export function CampaignDetailPage() {
                   <RefreshCw
                     className={`h-4 w-4 ${refreshing ? "animate-spin" : ""}`}
                   />
-                  Refresh
+                  <span className="hidden sm:inline">Refresh</span>
                 </Button>
               </div>
 
@@ -763,14 +763,14 @@ export function CampaignDetailPage() {
             />
           </PopoverContent>
         </Popover>
-        <Button
+        {/* <Button
           variant="outline"
           size="sm"
           onClick={() => setSelectedDate(new Date())}
           data-testid="today-button"
         >
           Today
-        </Button>
+        </Button> */}
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
