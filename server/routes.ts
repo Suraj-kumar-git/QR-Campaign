@@ -77,7 +77,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.use('/uploads', express.static(uploadsDir));
 
   // Handle HEAD requests to /api (often used for health checks) - BEFORE rate limiting
-  app.head("/api-test", (req, res) => {
+  app.head("/api", (req, res) => {
     res.status(200).end();
   });
 
